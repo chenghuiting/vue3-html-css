@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 100px;
+            /* 默认渐变的方向是从上到下的 改变方向，添加to right 属性，从左到右 */
+            /* background-image: linear-gradient(to right, red, blue); */
+
+            /* 从左下角到右上角 */
+            /* background-image: linear-gradient(to right top, red, blue); */
+
+            /* 还可以自定义角度值 deg */
+            /* background-image: linear-gradient(90deg, red, blue); */
+
+            /* 还可以多种颜色混合 */
+            background-image: linear-gradient(to right, red, blue 5%, orange 1%, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

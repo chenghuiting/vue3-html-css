@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 定义了一个变量 只有后代元素可以使用 */
+        /* html{
+            --main-color: #13d232;
+        } */
+
+        /* :root代表html */
+        :root{
+            --main-color: #13d232;
+        }
+
+        .box{
+            /* 通过var函数来使用变量 */
+            color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        我是box
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            // 插值语法 {{}}
+            //展示列表 v-for="" 模版语法；
+            template: `
+            <h2>{{title}}</h2>
+            <ul>
+                <li v-for="item in movies">{{item}}</li>
+            </ul>
+            `,
+            data: function () {
+                return {
+                    title: "Helle Wrod21312",
+                    movies: ["1111", "2222", "3333", "4444"],
+                }
+            },
+        })
+
+        app.mount("#app")
+    </script>
+</body>
+
+</html>

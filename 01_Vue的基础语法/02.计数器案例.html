@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>当前计数：{{count}}</h2>
+        <button @click="increase">+1</button>
+        <button @click="decrease">-1</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            // 不写template时，vue会默认将div里面的内容渲染到模版中；
+            // template: `
+            //     <h2>当前计数：{{count}}</h2>
+            //     <button @click="increase">+1</button>
+            //     <button @click="decrease">-1</button>
+            // `,
+            data() {
+                return {
+                    count: 0,
+                }
+            },
+            methods: {
+                increase: function () {
+                    // 此处可以使用this拿到count，因为vue底层用bind做了处理；
+                    this.count++;
+                },
+                decrease: function () {
+                    this.count--;
+                }
+            },
+        })
+
+        app.mount("#app")
+    </script>
+</body>
+
+</html>
