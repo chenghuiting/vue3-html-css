@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
+        .container {
             background-color: orange;
+
+            /*
+             2、使用BFC清除浮动 给父元素添加 overflow: auto;就清除浮动了；
+             原因：添加 overflow: auto;后就形成了一个新的BFC；
+             
+            */
+            overflow: auto;
         }
-        .item{
+
+        .item {
             width: 400px;
             height: 200px;
             background-color: red;
             border: 1px solid #000;
+            /* 
+             设置浮动后父元素就没有高度了，原因：
+             浮动元素是脱标元素，脱标元素不会将高度汇报给父元素，
+             所以父元素拿不到子元素的高度，导致父元素没有高度；
+             不设置浮动时，父元素的高度是由子元素撑开的；
+            */
+            float: left;
         }
+
+        /* 1、常见方法清除浮动 这种做法相当于创建了一个元素，并将这个元素放到浮动元素的下面 */
+        /* .clear_fix::after {
+            content: "";
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        } */
     </style>
 </head>
+
 <body>
-    <div class="container">
+    <!-- 将创建的clear_fix放到父元素上 -->
+    <div class="container clear_fix">
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
     </div>
 </body>
+
 </html>
