@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 用于移动端适配 width就是用来设置布局视口的宽度的 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        /* 
+            1、em：相对自己的 font-size；如果自己没有设置那么会继承父元素的font-size；
+               如果font-size中有写em单位，可以理解成相对于父元素，但是更准确的理解依然是相对于自己的；
+            2、rem：相对于html的 font-size；
+                开发时直接用px单位，webpack中会有插件帮我们转换成rem；
+        */
+        .box {
+            width: 100rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

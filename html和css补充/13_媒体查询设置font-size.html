@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            通过媒体查询来设置不同尺寸范围内的屏幕html的font-size尺寸；
+            缺点：
+                1、我们需要针对不同的屏幕编写大量的媒体查询；
+                2、如果动态改变尺寸，不会实时的进行更新（页面放缩不会跟着实时放缩）；
+        */
+        @media screen and (min-width: 320px) {
+            html {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (min-width: 375px) {
+            html {
+                font-size: 24px;
+            }
+        }
+
+        .box {
+            width: 5rem;
+            height: 5rem;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+
+    </script>
+</body>
+
+</html>
