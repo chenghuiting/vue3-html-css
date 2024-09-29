@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 方案一：手动计算 */
+        /* 
+            375px的设计稿
+            1vw = 3.75px
+         */
+        .box {
+            /* width: 100px;
+            height: 100px; */
+
+            /* 
+                100px / 3.75px = 26.667vm 
+            */
+            width: 26.667vw;
+            height: 26.667vw;
+            background-color: orange;
+        }
+
+        p {
+            /* 14/3.75 = 3.7333 */
+            font-size: 3.7333vm;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <p>我是文本</p>
+</body>
+
+</html>

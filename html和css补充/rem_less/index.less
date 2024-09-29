@@ -1,0 +1,18 @@
+// less使用混入换算rem；37.5是UI设计稿给的屏幕宽度375；
+// 混入可以将pxToRem当成一个函数接收参数；
+.pxToRem(@px) {
+    result: 1rem * (@px/37.5)
+}
+
+.box {
+    // width: 2.666667rem;
+    // height: 100px;
+    width: .pxToRem(100)[result]; //映射
+    height: .pxToRem(100)[result];
+    background-color: orange;
+}
+
+p {
+    // font-size: 14px;
+    font-size: .pxToRem(14)[result];
+}

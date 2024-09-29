@@ -1,0 +1,13 @@
+.tabbar {
+    /* 移动端适配，计算安全区域的高度 */
+    // 坑：+ 左右要有空格，要不然不生效；
+    // height: calc(env(safe-area-inset-bottom)+50px); //无效
+
+    height: calc(env(safe-area-inset-bottom) + 50px);
+    /* 让它占满屏幕 */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+}

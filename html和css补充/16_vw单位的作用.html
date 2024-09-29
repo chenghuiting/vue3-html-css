@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            rem：
+                1、动态的设置html的font-size，
+                   font-size: 视口的宽度 / 10
+                2、换算成rem的单位；
+        */
+
+        /* 
+            1、动态的设置html的font-size，
+               font-size: 视口的宽度 / 100 --> 1vw
+        */
+
+        html {
+            font-size: 10vw;
+            /* 1vw = 3.75px */
+        }
+
+        .box {
+            /* width: 100px; 
+            height: 100px; */
+
+            /* 将px单位换算成rem */
+            width: 2.666667rem;
+            height: 2.666667rem;
+            background-color: orange;
+        }
+      
+        .box {
+             /* 可以直接简写成 2.666667rem * 10vw = 26.667vw */
+            width: 26.6667vw;
+            height: 26.66667vw;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
