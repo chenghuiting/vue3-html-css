@@ -19,8 +19,33 @@
 <body>
     <!-- tabbar -->
     <div class="tabbar">
-
+        <div class="item">
+            <img src="./img/home.png" alt="" class="tab-button">
+            <img src="./img/home_active.png" alt="" class="tab-button active">
+        </div>
+        <div class="item">
+            <img src="./img/category.png" alt="" class="tab-button">
+            <img src="./img/category_active.png" alt="" class="tab-button active">
+        </div>
+        <div class="item">
+            <img src="./img/cart.png" alt="" class="tab-button">
+            <img src="./img/cart_active.png" alt="" class="tab-button active">
+        </div>
+        <div class="item">
+            <img src="./img/profile.png" alt="" class="tab-button">
+            <img src="./img/profile_active.png" alt="" class="tab-button active">
+        </div>
     </div>
+    <script>
+        const items = document.querySelectorAll(".item")
+        const images = document.querySelectorAll("img")
+        console.log(images);
+        items.forEach((element, index) => {
+            items[index].addEventListener("click", function () {
+                images[index].src = images[index].src.replace(".png", "_active.png")
+            })
+        });
+    </script>
 </body>
 
 </html>
