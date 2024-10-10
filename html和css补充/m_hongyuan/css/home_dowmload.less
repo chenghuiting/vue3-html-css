@@ -1,0 +1,52 @@
+@import url("./variables.less");
+
+.dowmload {
+    height: 16vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    .left {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        .logo {
+            width: 10.6667vw;
+            height: 10.6667vw;
+        }
+
+        .info {
+            line-height: 2.6667vw;
+            margin-left: 2.1333vw;
+
+            .title {
+                font-size: @normalFontSize;
+                font-weight: 700;
+            }
+
+            .new {
+                font-size: @smallFontSize;
+            }
+        }
+    }
+
+    .right {
+        width: 25.2vw;
+        font-size: @bigFontSize;
+        color: #fff;
+        background-image: -webkit-gradient(linear, left top, right top, from(#ff0409), to(#ff3162));
+        background-image: linear-gradient(to right, #ff0409, #ff3162);
+        text-align: center;
+        line-height: 16vw;
+    }
+}
